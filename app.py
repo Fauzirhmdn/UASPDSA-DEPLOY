@@ -14,7 +14,7 @@ height = st.number_input("Tinggi badan bayi (cm)", min_value=0.000000, max_value
 
 if st.button("Prediksi Status Gizi"):
     # Validasi input
-    if age == 0 or height == 0.0:
+    if height == 0.0:
         st.error("Semua input harus diisi dengan nilai yang valid.")
     else:
         # Siapkan data untuk prediksi
