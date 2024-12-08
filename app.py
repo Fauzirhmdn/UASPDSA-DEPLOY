@@ -9,8 +9,8 @@ with open(model_path, "rb") as file:
 st.title("Prediksi Status Stunting pada Bayi")
 
 age = st.number_input("Umur bayi (bulan)", min_value=0, max_value=60, step=1, help="Masukkan umur bayi dalam bulan")
-gender = st.radio("Jenis kelamin bayi", options=[0, 1], format_func=lambda x: "Laki-laki" if x == 0 else "Perempuan", help="Pilih jenis kelamin bayi (Laki-laki = 0, Perempuan = 1)")
-height = st.number_input("Tinggi badan bayi (cm)", min_value=0.0, max_value=120.0, step=0.1, help="Masukkan tinggi badan bayi dalam sentimeter")
+gender = st.radio("Jenis kelamin bayi", options=[0, 1], format_func=lambda x: "Laki-laki" if x == 0 else "Perempuan", help="Pilih jenis kelamin bayi")
+height = st.number_input("Tinggi badan bayi (cm)", min_value=0.000000, max_value=150.00000, step=0.1, help="Masukkan tinggi badan bayi dalam sentimeter")
 
 if st.button("Prediksi Status Gizi"):
     # Validasi input
